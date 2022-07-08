@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import GameCard from '../game-card/GameCard';
+import { Helmet } from 'react-helmet';
+import GameCard from '../../components/game-card/GameCard';
 import './HomePage.scss'
 
 const HomePage = () => {
@@ -24,6 +25,9 @@ const HomePage = () => {
 
     return (
         <div className='HomePage'>
+            <Helmet>
+                <title>REACTION PLAYGROUND</title>
+            </Helmet>
             <div className='homeTitle'>
                 Test your reaction times with the games below!
             </div>

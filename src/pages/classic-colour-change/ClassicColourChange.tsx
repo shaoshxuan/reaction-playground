@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import { useEffect, useState } from 'react';
 import GameInfoContainer from '../../components/game-info-container/GameInfoContainer';
 import './ClassicColourChange.scss';
+import { Helmet } from 'react-helmet'
 
 const ClassicColourChange = () => {
     const [localItems, setLocalItems] = useState<{[key: string]: number[]}>(JSON.parse(localStorage.getItem('reactionPlaygroundScores') || "{}"));
@@ -80,6 +81,9 @@ const ClassicColourChange = () => {
 
     return (
         <div className='ClassicColourChange'>
+            <Helmet>
+                <title>REACTION PLAYGROUND | Classic Colour Change</title>
+            </Helmet>
             <GameInfoContainer gameName={"Classic Colour Change"} gameInstructions={"Click on circle when color turns green!"} />
             <div className='gameArea'>
                 <div className={classNames('reactionCircle', changed && "colourChanged")} style={gameStarted ? {"cursor": "pointer"} : {"cursor": "default"}}

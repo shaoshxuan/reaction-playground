@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import HomePage from "../components/home-page/HomePage";
+import HomePage from "./home-page/HomePage";
 import ClassicColourChange from "./classic-colour-change/ClassicColourChange";
 
 const AppRoutes = () => {
