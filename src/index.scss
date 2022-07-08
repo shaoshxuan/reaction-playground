@@ -1,0 +1,44 @@
+* {
+    font-family: $main-font-family;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@media all and (min-width: 2401px){
+    :root {
+        font-size: 20px;
+    }
+}
+
+@media all and (max-width: 2400px){
+    :root {
+        font-size: 16px;
+    }
+}
+
+@media all and (max-width: 1920px){
+    :root {
+        font-size: 14px;
+    }
+}
+
+@media all and (max-width: 1440px){
+    :root {
+        font-size: 13px;
+    }
+}
+
+@media all and (max-width: 960px){
+    :root {
+        font-size: 12px;
+    }
+}
+
+@media all and (max-width: 480px){
+    :root {
+        font-size: 10px;
+    }
+}

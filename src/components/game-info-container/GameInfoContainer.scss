@@ -1,0 +1,16 @@
+.GameInfoContainer {
+    text-align: center;
+    color: $primary-green;
+    margin: 5rem;
+
+    .gameTitle {
+        margin: 1rem;
+        font-size: $supertitle-font-size;
+        font-weight: $bold-weight;
+    }
+
+    .gameInstructions {
+        font-size: $title-font-size;
+        font-weight: $regular-weight;
+    }
+}

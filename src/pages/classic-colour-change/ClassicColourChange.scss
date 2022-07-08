@@ -1,0 +1,99 @@
+.ClassicColourChange {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    .gameArea {
+        position: relative;
+        
+        .reactionCircle {
+            width: 30rem;
+            height: 30rem;
+            border-radius: 50%;
+            background-color: $red-stop;
+        }
+        .reactionCircle.colourChanged {
+            background-color: $green-go;
+        }
+
+        .inCircleControls {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            white-space: pre-wrap;
+
+            .reactionTime {
+                margin: 1rem 0;
+                text-align: center;
+                font-size: $title-font-size;
+                font-weight: $semi-bold-weight;
+                color: $primary-green;
+            }
+    
+            .readyBtn {
+                padding: 1rem 2rem;
+                border-radius: 5px;
+                background-color: $primary-accent;
+                font-size: $title-font-size;
+                font-weight: $semi-bold-weight;
+                color: $primary-green;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: $main-transition;
+                cursor: pointer;
+    
+                &:hover {
+                    background-color: $secondary-green;
+                    color: $primary-accent;
+                }
+            }
+        }
+    }
+
+    .scoreBoard {
+        position: absolute;
+        left: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        width: 15rem;
+        border-radius: 5px;
+        background: $secondary-green;
+        color: $primary-background;
+
+        .scoreboardTitle {
+            padding: 1rem;
+            text-align: center;
+            font-size: $title-font-size;
+            font-weight: $semi-bold-weight;
+        }
+
+        .top10Scores {
+            font-size: $title-font-size;
+            font-weight: $regular-weight;
+
+            .indivScores {
+                margin: 0.5rem 0;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1440px){
+    .ClassicColourChange {
+        .scoreBoard {
+            position: relative;
+            margin: 2rem;
+            left: auto;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.Footer {
+    margin-top: 2rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $primary-green;
+    font-size: $para-font-size;
+    font-weight: $light-weight;
+    color: $primary-background;
+}
