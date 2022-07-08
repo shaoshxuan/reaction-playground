@@ -9,6 +9,7 @@ const ClassicColourChange = () => {
 
     useEffect(() => {
         localStorage.setItem('reactionPlaygroundScores', JSON.stringify(localItems));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [detectChange])
 
     const [gameStarted, toggleGameStart] = useState<boolean>(false)
@@ -23,6 +24,7 @@ const ClassicColourChange = () => {
 
     useEffect(() => {
         endTime && startTime && setReactionTime((endTime.getTime()-startTime.getTime())/1000);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [endTime])
 
     useEffect(() => {
@@ -47,6 +49,7 @@ const ClassicColourChange = () => {
                 }
             }
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [reactionTime])
 
     const startGame = () => {
