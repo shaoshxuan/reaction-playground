@@ -18,7 +18,7 @@ const HomePage = () => {
             route: "classic-colour-change",
             thumbnail: "classic-colour-change.gif",
             gameName: "CLASSIC COLOUR CHANGE",
-            gameDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            gameDesc: "React as quickly as possible to the change of colour of the circle from red to green!",
             bestScore: localItems ? (localItems["classic-colour-change"] ? localItems["classic-colour-change"][0] : "Not Set") : "Not Set",
         }
     ]
