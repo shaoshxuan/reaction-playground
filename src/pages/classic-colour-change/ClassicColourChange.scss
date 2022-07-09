@@ -85,6 +85,26 @@
                 margin: 0.5rem 0;
             }
         }
+
+        .resetScoresBtn {
+            margin: 1rem;
+            width: 8rem;
+            height: 2rem;
+            font-size: $para-font-size;
+            font-weight: $regular-weight;
+            color: $primary-green;
+            border: none;
+            border-radius: 5px;
+            background-color: $primary-accent;
+            cursor: pointer;
+            transition: $main-transition;
+
+            &:hover {
+                color: $primary-accent;
+                background-color: $primary-green;
+                box-shadow: 0 0 5px 1px $primary-green;
+            }
+        }
     }
 }
 

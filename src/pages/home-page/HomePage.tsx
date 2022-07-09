@@ -19,7 +19,7 @@ const HomePage = () => {
             thumbnail: "classic-colour-change.gif",
             gameName: "CLASSIC COLOUR CHANGE",
             gameDesc: "React as quickly as possible to the change of colour of the circle from red to green!",
-            bestScore: localItems ? (localItems["classic-colour-change"] ? localItems["classic-colour-change"][0] : "Not Set") : "Not Set",
+            bestScore: localItems ? (localItems["classic-colour-change"] && localItems["classic-colour-change"].length !== 0 ? localItems["classic-colour-change"][0] : "Not Set") : "Not Set",
         }
     ]
 

@@ -79,6 +79,13 @@ const ClassicColourChange = () => {
         ));
     }
 
+    const resetScores = () => {
+        let tempScoreArr = localItems;
+        tempScoreArr["classic-colour-change"] = [];
+        setLocalItems(tempScoreArr);
+        toggleChangeDetection(!detectChange)
+    }
+
     return (
         <div className='ClassicColourChange'>
             <Helmet>
@@ -123,12 +130,21 @@ const ClassicColourChange = () => {
                     Your 10<br/>Best Times
                 </div>
                 <div className='top10Scores'>
-                    {localItems["classic-colour-change"] && localItems["classic-colour-change"].map((time, index) => {
-                        return (
-                            <div className="indivScores" key={index}>{index+1}. {time}s</div>
-                        )
-                    })}
+                    {
+                        localItems["classic-colour-change"] && localItems["classic-colour-change"].length !== 0
+                        ?
+                        localItems["classic-colour-change"].map((time, index) => {
+                            return (
+                                <div className="indivScores" key={index}>{index+1}. {time}s</div>
+                            )
+                        })
+                        :
+                        <div className="indivScores">Not Set</div>
+                    }
                 </div>
+                <button className="resetScoresBtn" onClick={() => resetScores()}>
+                    Reset Scores
+                </button>
             </div>
         </div>
     )
